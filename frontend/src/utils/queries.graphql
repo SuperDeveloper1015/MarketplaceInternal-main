@@ -1,0 +1,167 @@
+fragment profile on ProfileType {
+    id
+    address
+    username
+    name
+    bio
+    avatar
+    cover
+    twitch
+    instagram
+    twitter
+    onlyfans
+    verified
+    email
+    balanceBnb
+    balanceLof
+    blockCreation
+    artworks {
+        created {
+            ...artwork
+        }
+        collected {
+            ...artwork
+        }
+        auctions {
+            ...artwork
+        }
+    }
+    claimable {
+        tokenId
+        artwork {
+            ...artwork
+        }
+    }
+}
+
+fragment condensedProfile on CondensedProfileType {
+    id
+    address
+    username
+    name
+    avatar
+    bio
+    cover
+}
+
+fragment auctionBid on AuctionBidType {
+    id
+    profile {
+        ...condensedProfile
+    }
+    amount
+    won
+}
+
+fragment auction on AuctionType {
+    id
+    owner {
+        ...condensedProfile
+    }
+    startPrice
+    lastBid {
+        ...auctionBid
+    }
+    token {
+        ...token
+    }
+    state
+}
+
+fragment auctionWithBids on AuctionType {
+    ...auction
+    bids {
+        ...auctionBid
+    }
+}
+
+fragment token on TokenType {
+    tokenId
+    copy
+}
+
+fragment artwork on ArtworkType {
+    id
+    previewImage
+    preview
+    isVideoPreview
+    title
+    description
+    copies
+    creator {
+        ...condensedProfile
+    }
+    processed
+    tokenIds
+    minted
+    moderationPassed
+    auctions {
+        ...auction
+    }
+    prices
+}
+
+query getProfile($query: String!) {
+    profile(search: $query) {
+        ...profile
+    }
+}
+
+query getNonce {
+    nonce
+}
+
+query getDepositAddress {
+    depositAddress
+}
+
+query getInfo {
+    info {
+        lofPrice
+    }
+}
+
+query getKycToken {
+    kycToken
+}
+
+query getArtwork($id: String!) {
+    artwork(id: $id) {
+        ...artwork
+    }
+}
+
+query getIndexPage {
+    indexPage {
+        liveAuctions {
+            ...artwork
+        }
+        featuredArtworks {
+            ...artwork
+        }
+        featuredCreators {
+            ...condensedProfile
+        }
+        topSlider {
+            ...artwork
+        }
+    }
+}
+
+query creatorsIndex($q: String, $page: Int) {
+    creatorsIndex(q: $q, page: $page) {
+        items {
+            ...condensedProfile
+        }
+        hasMore
+    }
+}
+
+query artworksIndex($q: String, $auction: Boolean, $page: Int) {
+    artworksIndex(q: $q, auction: $auction, page: $page) {
+        items {
+            ...artwork
+        }
+        hasMore
+    }
+}

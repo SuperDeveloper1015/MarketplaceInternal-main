@@ -1,0 +1,36 @@
+.about-section {
+  padding: 4.5rem 0;
+}
+
+.typography {
+  h2,
+  h3,
+  p {
+    margin-bottom: 2.4rem;
+  }
+  p,
+  h3 {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $base-text;
+  }
+  p,
+  img {
+    max-width: 50.3rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #1f2b38;
+  }
+  div {
+    margin-bottom: 4rem;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  h3 {
+    font-weight: 700;
+  }
+}

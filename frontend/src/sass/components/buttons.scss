@@ -1,0 +1,104 @@
+.btn {
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  padding: 0.8rem 3rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  transition: padding .1s ease;
+  position: relative;
+  min-width: 110px;
+
+  &.loading {
+    padding: .8rem 2rem .8rem 4rem;
+
+    .spinner {
+      position: absolute;
+      left: 2rem;
+      top: 8px;
+      animation: rotate 2s linear infinite;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+
+      .path {
+        stroke: white;
+        stroke-linecap: round;
+        animation: spinner-dash 1.5s ease-in-out infinite;
+      }
+    }
+  }
+
+  &.primary {
+    background-color: $btn-bg;
+    line-height: 1.5;
+    border: 1.5px solid $btn-bg;
+    color: $white;
+    &:hover,
+    &.active,
+    &:checked {
+      color: $btn-bg;
+      background-color: transparent;
+      &.loading .spinner .path {
+        stroke: $btn-bg;
+      }
+    }
+  }
+
+  &.secondary {
+    color: $btn-bg;
+    border: 1.5px solid $btn-bg;
+    &:hover,
+    &.active,
+    &:checked {
+      color: $white;
+      background-color: $btn-bg;
+      &.loading .spinner .path {
+        stroke: $white;
+      }
+    }
+  }
+  &.light {
+    color: $white;
+    border: 1px solid $white;
+    &:hover,
+    &.active,
+    &:checked {
+      color: $base-text;
+      background-color: $white;
+      &.loading .spinner .path {
+        stroke: $base-text;
+      }
+    }
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

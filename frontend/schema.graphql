@@ -1,0 +1,196 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type ArtworkType {
+    auctions: [AuctionType!]
+    copies: Int!
+    creator: CondensedProfileType
+    description: String!
+    id: ID!
+    isVideoPreview: Boolean
+    minted: Boolean!
+    moderationPassed: Boolean
+    preview: String
+    previewImage: String
+    prices: [Decimal]
+    processed: Boolean!
+    title: String!
+    tokenIds: [Int]
+}
+
+type ArtworksIndexType {
+    hasMore: Boolean
+    items: [ArtworkType!]
+}
+
+type AuctionBidType {
+    amount: Decimal!
+    id: ID!
+    profile: CondensedProfileType
+    won: Boolean!
+}
+
+type AuctionType {
+    bids: [AuctionBidType!]
+    id: ID!
+    lastBid: AuctionBidType
+    owner: CondensedProfileType
+    startPrice: Decimal!
+    state: AppAuctionStateChoices!
+    token: TokenType
+}
+
+type ClaimTokenMutation {
+    args: [String]
+}
+
+type CloseAuctionMutation {
+    ok: Boolean
+}
+
+type CondensedProfileType {
+    address: String!
+    avatar: String
+    bio: String
+    cover: String
+    id: ID!
+    name: String!
+    username: String
+}
+
+type CreateArtworkMutation {
+    artwork: ArtworkType
+}
+
+type CreatorsIndexType {
+    hasMore: Boolean
+    items: [CondensedProfileType!]
+}
+
+type DeleteArtworkMutation {
+    ok: Boolean
+}
+
+type IndexPageType {
+    featuredArtworks: [ArtworkType!]
+    featuredCreators: [CondensedProfileType!]
+    liveAuctions: [ArtworkType!]
+    topSlider: [ArtworkType!]
+}
+
+type InfoType {
+    kycApi: String
+    lofPrice: Decimal
+}
+
+type MintMutation {
+    args: [String]
+}
+
+type Mutation {
+    claimToken(tokenId: Int): ClaimTokenMutation
+    closeAuction(auctionId: Int): CloseAuctionMutation
+    createArtwork(censoredFile: Upload, copies: Int!, description: String!, originalFile: Upload!, title: String!): CreateArtworkMutation
+    deleteArtwork(artworkId: ID): DeleteArtworkMutation
+    addMintedTokensByArtwork(artwork: ID, mintedTokens: [Int]) : MintedTokensByArtworkMutation
+    mint(artwork: ID): MintMutation
+    placeBid(amount: Decimal, auctionId: Int): PlaceBidMutation
+    requestWithdraw(address: String!, amount: Decimal!, currency: String!): RequestWithdrawMutation
+    signIn(nonce: String!, signature: String!): SignInMutation
+    startAuction(startPrice: Decimal, tokenId: Int): StartAuctionMutation
+    swap(amount: Decimal!): SwapMutation
+    updateProfile(avatar: Upload, bio: String, cover: Upload, email: String, instagram: String, name: String!, onlyfans: String, removeAvatar: Boolean, removeCover: Boolean, twitch: String, twitter: String, username: String): UpdateProfileMutation
+}
+
+type PlaceBidMutation {
+    ok: Boolean
+}
+
+type ProfileArtworksType {
+    auctions: [ArtworkType!]
+    collected: [ArtworkType!]
+    created: [ArtworkType!]
+}
+
+type ProfileType {
+    address: String!
+    artworks: ProfileArtworksType
+    avatar: String
+    balanceBnb: Decimal!
+    balanceLof: Decimal!
+    bio: String
+    blockCreation: Boolean!
+    claimable: [TokenType!]
+    cover: String
+    email: String
+    id: ID!
+    instagram: String
+    name: String!
+    onlyfans: String
+    twitch: String
+    twitter: String
+    username: String
+    verified: Boolean!
+}
+
+type Query {
+    artwork(id: String!): ArtworkType
+    artworksIndex(auction: Boolean, page: Int, q: String): ArtworksIndexType
+    creatorsIndex(page: Int, q: String): CreatorsIndexType
+    depositAddress: String!
+    indexPage: IndexPageType
+    info: InfoType
+    kycToken: String!
+    nonce: String!
+    profile(search: String!): ProfileType
+}
+
+type RequestWithdrawMutation {
+    ok: Boolean
+}
+
+type SignInMutation {
+    token: String
+}
+
+type StartAuctionMutation {
+    ok: Boolean
+}
+
+type SwapMutation {
+    ok: Boolean
+}
+
+type TokenType {
+    artwork: ArtworkType
+    copy: Int!
+    tokenId: Int!
+}
+
+type UpdateProfileMutation {
+    profile: ProfileType!
+}
+
+"An enumeration."
+enum AppAuctionStateChoices {
+    "Finished"
+    FINISHED
+    "Pending"
+    PENDING
+    "Running"
+    RUNNING
+}
+
+
+"The `Decimal` scalar type represents a python Decimal."
+scalar Decimal
+
+"""
+Create scalar that ignores normal serialization/deserialization, since
+that will be handled by the multipart request spec
+"""
+scalar Upload

@@ -1,0 +1,62 @@
+.form-search {
+  padding: 2.4rem 0;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  &__input {
+    width: 100%;
+    padding: 1.4rem 19.5rem 1.4rem 5rem;
+    background-color: $input-bg;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $base-text;
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+  &__btn {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 1.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__select {
+    position: absolute;
+    right: 1.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $base-text;
+  }
+}
+
+.nice-select {
+  border: none;
+  background-color: $input-bg;
+  height: auto;
+  padding-right: 1.7rem;
+  &::after {
+    content: "";
+    border-right: none;
+    border-bottom: none;
+    width: 1.2rem;
+    height: 0.7rem;
+    right: 0;
+    top: 50%;
+    margin-top: -2px;
+    transform: translateY(-50%);
+    background-image: url(" ../images/arrow-bottom.svg ");
+    background-repeat: no-repeat;
+    transform: rotate(0);
+  }
+
+  &.open::after {
+    transform: rotate(180deg) translate(15%, 60%);
+  }
+}

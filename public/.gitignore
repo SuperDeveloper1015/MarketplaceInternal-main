@@ -1,0 +1,4 @@
+uploads/*
+static/*
+!.gitkeep
+!uploads/default.png

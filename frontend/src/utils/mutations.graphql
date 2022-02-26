@@ -1,0 +1,77 @@
+mutation signIn($nonce: String!, $signature: String!) {
+    signIn(nonce: $nonce, signature: $signature) {
+        token
+    }
+}
+
+mutation updateProfile($name: String!, $username: String, $email: String, $bio: String, $twitch: String, $cover: Upload, $removeCover: Boolean, $avatar: Upload, $removeAvatar: Boolean,
+                       $instagram: String, $twitter: String, $onlyfans: String) {
+    updateProfile(name: $name, username: $username, email: $email, bio: $bio, twitch: $twitch, instagram: $instagram,
+                  twitter: $twitter, onlyfans: $onlyfans, cover: $cover, removeCover: $removeCover, avatar: $avatar, removeAvatar: $removeAvatar) {
+        profile {
+            ...profile
+        }
+    }
+}
+
+mutation requestWithdraw($amount: Decimal!, $currency: String!, $address: String!) {
+    requestWithdraw(amount: $amount, currency: $currency, address: $address) {
+        ok
+    }
+}
+
+mutation swap($amount: Decimal!) {
+    swap(amount: $amount) {
+        ok
+    }
+}
+
+mutation createArtwork($originalFile: Upload!, $censoredFile: Upload, $title: String!, $description: String!, $copies: Int!) {
+    createArtwork(originalFile: $originalFile, censoredFile: $censoredFile, title: $title, description: $description, copies: $copies) {
+        artwork {
+            ...artwork
+        }
+    }
+}
+
+mutation deleteArtwork($artworkId: ID!) {
+    deleteArtwork(artworkId: $artworkId) {
+        ok
+    }
+}
+
+mutation MintedTokensByArtworkMutation($artwork: ID!, $mintedTokens: Array<Int>!){
+    addMintedTokensByArtwork(artwork: $artwork, mintedTokens: $mintedTokens) {
+        ok
+    }
+}
+
+mutation mint($artwork: ID!) {
+    mint(artwork: $artwork) {
+        args
+    }
+}
+
+mutation startAuction($tokenId: Int!, $startPrice: Decimal!) {
+    startAuction(tokenId: $tokenId, startPrice: $startPrice) {
+        ok
+    }
+}
+
+mutation closeAuction($auctionId: Int!) {
+    closeAuction(auctionId: $auctionId) {
+        ok
+    }
+}
+
+mutation claimToken($tokenId: Int!) {
+    claimToken(tokenId: $tokenId) {
+        args
+    }
+}
+
+mutation placeBid($auctionId: Int!, $amount: Decimal!) {
+    placeBid(auctionId: $auctionId, amount: $amount) {
+        ok
+    }
+}

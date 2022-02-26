@@ -1,0 +1,368 @@
+.header {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid $border-head;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 5.8rem;
+    flex: none;
+    margin-right: 2rem;
+    img {
+      height: 4rem;
+    }
+  }
+  .user-wrap {
+    display: flex;
+  }
+}
+
+.nav {
+  ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  li {
+    margin-bottom: 3rem;
+    @media (min-width: 768px) {
+      margin-right: 4rem;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    font-size: 2.2rem;
+    line-height: 1.6;
+    color: $white;
+    border-bottom: 2px solid transparent;
+    transition: $base-transition;
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: $base-text;
+      opacity: 0.5;
+    }
+
+    &:hover,
+    &.active {
+      opacity: 1;
+      border-bottom: 2px solid $white;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &.user-nav_profile {
+    height: 39px;
+    @media (min-width: 768px) {
+      .btn {
+        margin-right: 2rem;
+      }
+    }
+    @media (min-width: 968px) {
+      padding-right: 305px;
+      .btn {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .btn {
+    display: none;
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+}
+
+.user-info {
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  right: 4.1rem;
+  width: 300px;
+  @media (min-width: 768px) {
+    right: 0;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 16px;
+    max-height: 0;
+    transition: $base-transition;
+    @media (min-width: 968px) {
+      max-height: 4rem;
+    }
+  }
+  &.active {
+    .user-info__wrap {
+      background-color: $white;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+      max-height: 40rem;
+      margin-top: -5px;
+      padding-top: 5px;
+    }
+    .user-info__head {
+      //padding: 1.6rem 3.7rem 1.2rem 1.6rem;
+      margin-bottom: 5px;
+      &::after {
+        transform: rotate(180deg);
+
+        opacity: 1;
+      }
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    padding: 0 3.7rem 0 1.6rem;
+    background-color: $white;
+    transition: $base-transition;
+    cursor: pointer;
+    height: 4rem;
+    &::after {
+      content: url("../images/arrow-bottom.svg");
+      position: absolute;
+      right: 1.9rem;
+      top: 2rem;
+      transition: $base-transition;
+      opacity: 0;
+      @media (min-width: 968px) {
+        opacity: 1;
+      }
+    }
+  }
+  &__info {
+    flex-basis: 0;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  &__img {
+    background-color: white;
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.8rem;
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+    }
+  }
+  &__name {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $base-text;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+  }
+  &__second-name,
+  &__balance {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  &__second-name {
+    color: $btn-bg;
+    margin-right: 0.8rem;
+  }
+  &__balance {
+    display: flex;
+    align-items: center;
+    color: $base-text;
+  }
+  &__text {
+    opacity: 0.5;
+    margin-right: 0.2rem;
+  }
+  &__icon {
+    width: 1.5rem;
+    margin-right: 0.2rem;
+
+    img {
+      display: block;
+      max-width: 1.5rem;
+    }
+  }
+}
+
+.user-menu {
+  &__wrap {
+    padding: 0 1.2rem 1.6rem;
+    background-color: $white;
+  }
+  &__address {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $base-text;
+    opacity: 0.5;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $base-text;
+    padding: 0.2rem 0;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid transparent;
+    transition: $base-transition;
+    &:hover {
+      border-bottom: 1px solid $base-text;
+    }
+  }
+  &__info {
+    color: $danger;
+  }
+  &__out {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $danger;
+    transition: $base-transition;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.nav-wrap {
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: $btn-bg;
+  transition: $base-transition;
+  @media (min-width: 768px) {
+    position: static;
+    background-color: $white;
+    width: auto;
+    height: auto;
+  }
+  &.active {
+    right: 0;
+  }
+
+  .nav-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 5rem 2.5rem 3.5rem;
+    @media (min-width: 768px) {
+      height: auto;
+      padding: 0;
+    }
+  }
+  .light {
+    display: inline-block;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.user-burger {
+  position: relative;
+  padding-right: 1.6rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  &::after {
+    content: url("../images/arrow-bottom.svg");
+    position: absolute;
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    margin-right: 0;
+  }
+  @media (min-width: 968px) {
+    display: none;
+  }
+
+  &__img {
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  background-color: $btn-bg;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      top: 7px;
+      transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+      transform: translateX(2000px);
+    }
+    span:nth-child(3) {
+      bottom: 7px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  span {
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: relative;
+    transition: $base-transition;
+    background-color: $white;
+  }
+  span + span {
+    margin-top: 0.5rem;
+  }
+}

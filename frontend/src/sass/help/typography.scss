@@ -1,0 +1,38 @@
+.main-title {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  font-weight: 700;
+  color: $base-text;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  color: $base-text;
+  @media (min-width: 360px) {
+    font-size: 2.4rem;
+  }
+}
+
+.user {
+  text-align: left;
+  &__name {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: $base-text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media (min-width: 1310px) {
+      font-size: 2rem;
+    }
+  }
+  &__secondname {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: $btn-bg;
+  }
+}

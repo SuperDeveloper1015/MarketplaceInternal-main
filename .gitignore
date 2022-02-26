@@ -1,0 +1,6 @@
+*.py[oc]
+.idea
+/db.sqlite3
+__pycache__
+venv/
+.env

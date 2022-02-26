@@ -1,0 +1,1 @@
+type TokenType = 'image' | 'video' | 'gif';

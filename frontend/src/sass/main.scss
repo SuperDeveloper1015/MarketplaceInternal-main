@@ -1,0 +1,24 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "help/variables";
+@import "help/mixins";
+@import "help/basic";
+@import "help/typography";
+
+@import "blocks/footer";
+@import "blocks/header";
+@import "blocks/main-sections";
+@import "blocks/nice-select";
+@import "components/buttons";
+@import "components/loader";
+@import "components/popups";
+@import "components/swiper";
+@import "pages/about";
+@import "pages/atwork";
+@import "pages/creator-search";
+@import "pages/index";
+@import "pages/profile";
+@import "pages/site-map";
+
+.Toastify {
+  font-size: 12px;
+}

@@ -1,0 +1,36 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==3.2.6"
+graphene-file-upload = "*"
+django-cors-headers = "*"
+django-environ = "*"
+django-redis = "*"
+web3 = "==5.23.1"
+psycopg2-binary = "*"
+python-magic = "==0.4.22"
+django-dbsettings = "*"
+pillow = "*"
+email-validator = "*"
+graphql-utilities = "*"
+graphene-django = "==3.0.0b7"
+pyjwt = "*"
+django-constance = "*"
+django-admin-actions = "*"
+eth-brownie = "==1.16.4"
+ffmpeg-python = "*"
+django-spa = "*"
+django-dynamic-preferences = "*"
+sorl-thumbnail = "*"
+uwsgi = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

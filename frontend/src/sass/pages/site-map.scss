@@ -1,0 +1,23 @@
+.map-section {
+  padding: 2rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+  li {
+    margin-bottom: 1rem;
+  }
+  a {
+    padding: 0.5rem 0;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 500;
+    color: $base-text;
+    border-bottom: 1px solid transparent;
+    transition: $base-transition;
+    &:hover {
+      color: $btn-bg;
+      border-bottom: 1px solid $btn-bg;
+    }
+  }
+}

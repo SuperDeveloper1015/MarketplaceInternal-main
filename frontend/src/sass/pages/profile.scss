@@ -1,0 +1,272 @@
+.profile {
+  position: relative;
+  padding: 2.4rem 0 8rem;
+  z-index: 5;
+  @media (min-width: 968px) {
+    display: flex;
+  }
+
+  &__info {
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+    @media (min-width: 768px) {
+      padding-top: 5rem;
+      margin-bottom: 0;
+    }
+    @media (min-width: 968px) {
+      max-width: 45%;
+      margin-right: 2.3rem;
+    }
+    @media (min-width: 1200px) {
+      width: 50.3rem;
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__names {
+    min-width: 0;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  &__name {
+    display: block;
+    font-size: 2.8rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: $base-text;
+    margin-right: 2rem;
+    @media (min-width: 768px) {
+      font-size: 3.2rem;
+      line-height: 1.5;
+    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__status {
+    position: relative;
+    bottom: -3px;
+    margin-right: auto;
+  }
+  &__second-name,
+  &__link {
+    display: block;
+    color: $btn-bg;
+    margin-bottom: 1.2rem;
+  }
+  &__second-name,
+  &__follow-title,
+  &__subtitle,
+  &__text,
+  &__link {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+  &__follow-title,
+  &__subtitle {
+    color: $base-text;
+    opacity: 0.5;
+  }
+  &__descr {
+    margin-bottom: 1.6rem;
+    .profile__subtitle {
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+  }
+  &__follow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+  }
+  &__follow-item {
+    margin-right: 2.3rem;
+  }
+  &__follow-num {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $base-text;
+  }
+  &__links {
+    .profile__subtitle {
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    transition: $base-transition;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      margin-right: 0.7rem;
+    }
+    path {
+      fill: $btn-bg;
+    }
+  }
+
+  .card {
+    @media (min-width: 970px) {
+      width: 50%;
+    }
+    @media (min-width: 1200px) {
+      width: 33.33%;
+    }
+  }
+}
+
+.profile-head {
+  height: 17.5rem;
+  padding-top: 11.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: #c4c4c4;
+  @media (min-width: 768px) {
+    height: 22.7rem;
+    padding-top: 15.5rem;
+  }
+  &__img {
+    width: 11.8rem;
+    height: 11.8rem;
+    border: 1rem solid $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: white;
+    @media (min-width: 768px) {
+      width: 14.8rem;
+      height: 14.8rem;
+    }
+    img {
+      width: 9.8rem;
+      height: 9.8rem;
+      object-fit: cover;
+      @media (min-width: 768px) {
+        width: 12.8rem;
+        height: 12.8rem;
+      }
+    }
+  }
+}
+
+.profile-tabs {
+  width: 100%;
+  @media (min-width: 1200px) {
+    max-width: 77.5rem;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid $border-head;
+    margin-bottom: 1.6rem;
+  }
+  &__buttons {
+    display: flex;
+    margin-bottom: 1rem;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+  &__tab {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 500;
+    opacity: 0.5;
+    color: $base-text;
+    margin-right: 2.4rem;
+    cursor: pointer;
+    transition: $base-transition;
+    @media (min-width: 768px) {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+    &.active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__select {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+    span {
+      opacity: 0.5;
+      display: block;
+    }
+  }
+  &__body {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  .nice-select {
+    background-color: transparent;
+    .current {
+      opacity: 1;
+    }
+  }
+}
+
+.profile-btn {
+  margin-right: 2.2rem;
+  width: 20px;
+
+  &:last-child {
+    margin-right: 2.2rem;
+  }
+}
+
+.profile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #1f2b38;
+  min-width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+
+  &.active {
+    max-height: 100px;
+  }
+
+  ul {
+    padding: 1.6rem 1.2rem;
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+}

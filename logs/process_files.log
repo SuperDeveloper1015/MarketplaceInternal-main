@@ -1,0 +1,408 @@
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 413, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/base.py", line 354, in run_from_argv
+    parser.print_help()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/base.py", line 398, in execute
+    if options['force_color'] and options['no_color']:
+  File "/var/www/lofcrypto/app/management/commands/process_files.py", line 26, in handle
+    for artwork in Artwork.objects.filter(processed=False):  # type: Artwork
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._insert(item, fields=fields, using=self.db, ignore_conflicts=ignore_conflicts)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 513, in as_sql
+    for part in args_parts:
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 55, in pre_sql_setup
+    Do any necessary class setup immediately prior to producing SQL. This
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 46, in setup_query
+    
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 262, in get_select
+    get_select_from_parent(klass_info)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    if ((name in self.query.alias_map and name not in self.query.table_map) or
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/db/models/expressions.py", line 836, in as_sql
+    return '*', []
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+Traceback (most recent call last):
+  File "/var/www/lofcrypto/manage.py", line 22, in <module>
+    main()
+  File "/var/www/lofcrypto/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    django.setup()
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/apps/config.py", line 223, in create
+    import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/__init__.py", line 1, in <module>
+    from dbsettings.values import *  # NOQA
+  File "/var/www/lofcrypto/venv/lib/python3.8/site-packages/dbsettings/values.py", line 15, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/var/www/lofcrypto/venv/lib/python3.8/site-packages/django/utils/translation/__init__.py)
+WARNING:root:Artwork #3 processed
+WARNING:root:Artwork #4 processed
+WARNING:root:Artwork #5 processed
+WARNING:root:Artwork #6 processed
+WARNING:root:Artwork #7 processed
+WARNING:root:Artwork #8 processed
+WARNING:root:Artwork #9 processed
+WARNING:root:Artwork #10 processed

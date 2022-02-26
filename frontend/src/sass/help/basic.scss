@@ -1,0 +1,186 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $base-font;
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: $base-transition;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: $base-transition;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+select {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: $base-transition;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 134.2rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.container-small {
+  max-width: 58.7rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+//scroll
+.scroll-wrap::-webkit-scrollbar {
+  width: 3px;
+  background-color: #ccc;
+}
+
+.scroll-wrap::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
+}
+
+// media
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1360px) {
+}
+@media (min-width: 1440px) {
+}

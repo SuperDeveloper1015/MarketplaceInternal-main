@@ -1,0 +1,7 @@
+uwsgi:
+  socket: /tmp/lofcrypto.sock
+  module: lofcrypto.wsgi:application
+  chmod-socket: 666
+  master: true
+  processes: 4
+  enable-threads: true

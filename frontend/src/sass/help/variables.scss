@@ -1,0 +1,24 @@
+$breakpoints: (
+  "xl": 1920px,
+  "lg": 1280px,
+  "md": 768px,
+  "sm": 480px,
+  "xs": 460px,
+);
+
+$black: #000000;
+$white: #ffffff;
+$btn-bg: #ff5693;
+$base-text: #1f2b38;
+$border-head: #e2e2e2;
+$input-bg: #f6f7f8;
+$border-dashed: #c4c4c4;
+$danger: #ff5e54;
+$wrong: #ff0000;
+$wrong-bg: rgba(255, 0, 0, 0.1);
+$green-text: rgba(12, 160, 9, 0.5);
+$modern-text: #ffba09;
+
+$base-font: "Poppins", sans-serif;
+
+$base-transition: all 0.3s ease;
